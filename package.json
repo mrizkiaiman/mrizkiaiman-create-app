@@ -20,10 +20,10 @@
   "author": "M. Rizki Aiman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mrizkiaiman/mrizkiaiman-nextjs/issues"
+    "url": "https://github.com/mrizkiaiman/mrizkiaiman-create-app/issues"
   },
-  "homepage": "https://github.com/mrizkiaiman/mrizkiaiman-nextjs#readme",
+  "homepage": "https://github.com/mrizkiaiman/mrizkiaiman-create-app",
   "bin": {
-    "multiply": "bin/mrizkiaiman"
+    "mrizkiaiman-create-app": "bin/mrizkiaiman"
   }
 }
