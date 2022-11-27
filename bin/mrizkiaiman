@@ -1,0 +1,28 @@
+#!/bin/bash
+
+function createApp {
+  APP_TYPE=$2
+  APP_NAME=$3
+  echo "Create $APP_TYPE app"
+
+  if [[ $APP_TYPE = "nextjs" ]]
+  then
+    npx create-next-app -e https://github.com/mrizkiaiman/mrizkiaiman-nextjs $APP_NAME
+  elif [[ $APP_TYPE = "react-native" ]]
+  then
+    npx react-native init $APP_NAME
+  else
+    echo "Wrong command - Command example: ./mrizkiaiman create-app nextjs ExampleApp"
+  fi
+}
+
+function main {
+  if [[ $1 = "create-app" ]]
+  then
+    createApp $1 $2 $3
+  else
+    echo "Wrong command - current available argument: create-app"
+  fi
+}
+
+ main $1 $2 $3

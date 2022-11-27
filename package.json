@@ -1,29 +1,29 @@
 {
   "name": "mrizkiaiman-nextjs",
-  "version": "0.1.1",
-  "private": false,
+  "version": "0.1.0",
+  "description": "mrizkiaiman's app boilerplates",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@lukemorales/query-key-factory": "^1.0.3",
-    "@tanstack/react-query": "^4.17.1",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
-    "eslint": "8.28.0",
-    "eslint-config-next": "13.0.5",
-    "next": "13.0.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrizkiaiman/mrizkiaiman-nextjs.git"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.19",
-    "tailwindcss": "^3.2.4"
+  "keywords": [
+    "javascript",
+    "typescript",
+    "react",
+    "react-native",
+    "nextjs"
+  ],
+  "author": "M. Rizki Aiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrizkiaiman/mrizkiaiman-nextjs/issues"
+  },
+  "homepage": "https://github.com/mrizkiaiman/mrizkiaiman-nextjs#readme",
+  "bin": {
+    "multiply": "bin/mrizkiaiman"
   }
 }
