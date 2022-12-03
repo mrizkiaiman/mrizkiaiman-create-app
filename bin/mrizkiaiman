@@ -2,7 +2,7 @@
 function main {
   APP_TYPE=$1
   APP_NAME=$2
-  echo "Create $APP_TYPE app"
+  echo "Creating $APP_TYPE app....."
 
   if [[ $APP_TYPE = "nextjs" ]]
   then
