@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/mrizkiaiman/mrizkiaiman-create-app",
   "bin": {
-    "create-mrizkiaiman-app": "bin/mrizkiaiman"
+    "mrizkiaiman-create-app": "bin/mrizkiaiman"
   }
 }
