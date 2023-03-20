@@ -1,18 +1,44 @@
 #!/bin/bash
+
 function main {
   APP_TYPE=$1
   APP_NAME=$2
-  echo "Creating $APP_TYPE app....."
 
-  if [[ $APP_TYPE = "nextjs" ]]
-  then
-    npx create-next-app -e https://github.com/mrizkiaiman/mrizkiaiman-nextjs $APP_NAME
-  elif [[ $APP_TYPE = "react-native" ]]
-  then
-    npx react-native init $APP_NAME
-  else
-    echo "Wrong command - available apps: nextjs | react-native"
+  if [[ $APP_NAME = "" ]]
+  then  
+    echo "Select app option:"
+    echo "1. Next.js (web)"
+    echo "2. Expo (mobile-app)"
+    read option
+
+    if [[ $option = "1" ]]
+    then  
+      echo "Type the app name:"
+      read appName
+      npx create-next-app -e https://github.com/mrizkiaiman/mrizkiaiman-nextjs $appName
+    elif [[ $option = "2" ]]
+    then  
+      echo "Type the app name:"
+      read appName
+      npx create-expo-app $appName
+    else
+      echo "Invalid option selected"
+      exit 1
+    fi
+  else 
+    echo "Creating $APP_TYPE app....."
+
+    if [[ $APP_TYPE = "nextjs" ]]
+    then
+      npx create-next-app -e https://github.com/mrizkiaiman/mrizkiaiman-nextjs $APP_NAME
+    elif [[ $APP_TYPE = "react-native" ]]
+    then
+      npx react-native init $APP_NAME
+    else
+      echo "Wrong command - available apps: nextjs | react-native"
+      exit 1
+    fi
   fi
 }
 
- main $1 $2
+main $1 $2
