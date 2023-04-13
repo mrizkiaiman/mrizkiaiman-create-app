@@ -1,6 +1,6 @@
 {
   "name": "mrizkiaiman-create-app",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "mrizkiaiman's app boilerplates",
   "main": "index.js",
   "scripts": {
