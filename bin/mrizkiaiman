@@ -7,8 +7,8 @@ function main {
   if [[ $APP_NAME = "" ]]
   then  
     echo "Select app option:"
-    echo "1. Next.js (web)"
-    echo "2. Expo (mobile-app)"
+    echo "1. Next.js (TypeScript & Tailwind CSS)"
+    echo "2. Turborepo (TypeScript & Tailwind CSS)"
     read option
 
     if [[ $option = "1" ]]
@@ -20,7 +20,7 @@ function main {
     then  
       echo "Type the app name:"
       read appName
-      npx create-expo-app $appName
+      npx npx create-turbo -e https://github.com/mrizkiaiman/mrizkiaiman-turborepo $appName
     else
       echo "Invalid option selected"
       exit 1
@@ -31,11 +31,11 @@ function main {
     if [[ $APP_TYPE = "nextjs" ]]
     then
       npx create-next-app -e https://github.com/mrizkiaiman/mrizkiaiman-nextjs $APP_NAME
-    elif [[ $APP_TYPE = "react-native" ]]
+    elif [[ $APP_TYPE = "turborepo" ]]
     then
-      npx react-native init $APP_NAME
+      npx create-turbo -e https://github.com/mrizkiaiman/mrizkiaiman-turborepo $APP_NAME
     else
-      echo "Wrong command - available apps: nextjs | react-native"
+      echo "Wrong command - available apps: nextjs | turborepo"
       exit 1
     fi
   fi

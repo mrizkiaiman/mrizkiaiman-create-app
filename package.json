@@ -16,7 +16,8 @@
     "typescript",
     "react",
     "react-native",
-    "nextjs"
+    "nextjs",
+    "turborepo"
   ],
   "author": "M. Rizki Aiman",
   "license": "ISC",
